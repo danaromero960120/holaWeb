@@ -10,56 +10,102 @@
 </head>
 <body>
     <div class="container"> <!-- clase principal -->
-    <div class="item">
-        <h2>MAP</h2>
-        <p>Permite recorrer un arreglo y crear uno nuevo transformando cada elemento con una función</p>
-    </div>
+        <div class="item">
+            <h2>MAP</h2>
+            <p>Permite recorrer un arreglo y crear uno nuevo transformando cada elemento con una función.</p>
+            <pre><code>
+const numeros = [1, 2, 3];
+const doble = numeros.map(n => n * 2);
+console.log(doble); // [2, 4, 6]
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>FILTER</h2>
-        <p>Sirve para filtrar los elementos de un arreglo que cumplen una condición, y devuelve un nuevo arreglo solo con ellos.</p>
-    </div>
+        <div class="item">
+            <h2>FILTER</h2>
+            <p>Filtra los elementos de un arreglo que cumplen una condición y devuelve un nuevo arreglo con ellos.</p>
+            <pre><code>
+const edades = [12, 18, 22, 15];
+const mayores = edades.filter(e => e >= 18);
+console.log(mayores); // [18, 22]
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>REDUCE</h2>
-        <p>Toma todos los valores de un arreglo y los reduce a un solo resultado, como sumar o multiplicar.</p>
-    </div>
+        <div class="item">
+            <h2>REDUCE</h2>
+            <p>Reduce todos los valores de un arreglo a un solo resultado (por ejemplo, la suma total).</p>
+            <pre><code>
+const nums = [1, 2, 3, 4];
+const suma = nums.reduce((a, b) => a + b, 0);
+console.log(suma); // 10
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>FIND</h2>
-        <p>Busca y devuelve el primer elemento que cumple una condición.</p>
-    </div>
+        <div class="item">
+            <h2>FIND</h2>
+            <p>Devuelve el primer elemento que cumple una condición.</p>
+            <pre><code>
+const numeros = [10, 20, 30, 40];
+const encontrado = numeros.find(n => n > 25);
+console.log(encontrado); // 30
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>SORT</h2>
-        <p>Sirve para ordenar los elementos de un arreglo, ya sea de forma numérica o alfabética.</p>
-    </div>
+        <div class="item">
+            <h2>SORT</h2>
+            <p>Ordena los elementos de un arreglo de forma alfabética o numérica.</p>
+            <pre><code>
+const letras = ['b', 'a', 'c'];
+letras.sort();
+console.log(letras); // ['a', 'b', 'c']
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>INCLUDES</h2>
-        <p>VVerifica si un arreglo contiene un valor específico, y devuelve true o false</p>
-    </div>
+        <div class="item">
+            <h2>INCLUDES</h2>
+            <p>Verifica si un arreglo contiene un valor específico, devuelve true o false.</p>
+            <pre><code>
+const frutas = ['manzana', 'pera', 'uva'];
+console.log(frutas.includes('pera')); // true
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>INDEX OF</h2>
-        <p>Indica la posición (índice) donde se encuentra un elemento dentro del arreglo..</p>
-    </div>
+        <div class="item">
+            <h2>INDEX OF</h2>
+            <p>Devuelve la posición (índice) donde se encuentra un elemento dentro del arreglo.</p>
+            <pre><code>
+const colores = ['rojo', 'verde', 'azul'];
+console.log(colores.indexOf('verde')); // 1
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>SOME</h2>
-        <p>Devuelve true si al menos uno de los elementos cumple la condición..</p>
-    </div>
+        <div class="item">
+            <h2>SOME</h2>
+            <p>Devuelve true si al menos uno de los elementos cumple la condición.</p>
+            <pre><code>
+const edades = [15, 20, 17];
+console.log(edades.some(e => e >= 18)); // true
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>EVERY</h2>
-        <p>Devuelve true si todos los elementos cumplen la condición.</p>
-    </div>
+        <div class="item">
+            <h2>EVERY</h2>
+            <p>Devuelve true si todos los elementos cumplen la condición.</p>
+            <pre><code>
+const edades = [18, 22, 25];
+console.log(edades.every(e => e >= 18)); // true
+            </code></pre>
+        </div>
 
-    <div class="item">
-        <h2>SLICE</h2>
-        <p>Copia una parte específica del arreglo sin modificar el original.</p>
+        <div class="item">
+            <h2>SLICE</h2>
+            <p>Copia una parte específica del arreglo sin modificar el original.</p>
+            <pre><code>
+const animales = ['perro', 'gato', 'pez', 'ave'];
+const copia = animales.slice(1, 3);
+console.log(copia); // ['gato', 'pez']
+            </code></pre>
+        </div>
     </div>
-</div>
-g
 </body>
+
 </html>
