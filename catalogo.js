@@ -1,4 +1,4 @@
-const productos = [
+const catalogo = [
   { nombre: "compu", precio: 15000, categoria: "tecnologia", imagen: "imagenes/im1.jpg" },
   { nombre: "Mouse", precio: 300, categoria: "tecnologia", imagen: "imagenes/im2.jpg" },
   { nombre: "Teclado", precio: 800, categoria: "tecnologia", imagen: "imagenes/im3.jpg" },
@@ -213,7 +213,7 @@ actual = 0;
 let tabla1 = "<table border='1' cellspacing='0' cellpadding='5'>";
 tabla1 += "<tr><th>Imagen</th><th>Nombre</th><th>Precio</th><th>Categoría</th></tr>";
 
-for (p of productos) { 
+for (p of catalogo) { 
   tabla1 += `
     <tr>
       <td><img src="${p.imagen}" width="80"></td>
@@ -242,28 +242,28 @@ function mostrarProductos(arreglo) {
   document.getElementById("control2").innerHTML = tabla2;
 }
 
-mostrarProductos(productos);
+mostrarProductos(catalogo);
 
 document.getElementById("eje1").addEventListener("click", () => {
-  const filtrados = productos.filter(p => p.categoria === "tecnologia");
+  const filtrados = catalogo.filter(p => p.categoria === "tecnologia");
   mostrarProductos(filtrados);
 });
 document.getElementById("eje2").addEventListener("click", () => {
-  const filtrados = productos.filter(p => p.categoria === "dulces");
+  const filtrados = catalogo.filter(p => p.categoria === "dulces");
   mostrarProductos(filtrados);
 });
 document.getElementById("eje3").addEventListener("click", () => {
-  const filtrados = productos.filter(p => p.precio <= 500);
+  const filtrados = catalogo.filter(p => p.precio <= 500);
   mostrarProductos(filtrados);
 });
 document.getElementById("eje4").addEventListener("click", () => {
-  const filtrados = productos
+  const filtrados = catalogo
     .filter(p => p.precio <= 500)
     .sort((a, b) => a.precio - b.precio); 
   mostrarProductos(filtrados);
 });
 document.getElementById("eje5").addEventListener("click", () => {
-  const filtrados = productos
+  const filtrados = catalogo
     .filter(p => p.precio >= 501 && p.precio <= 2000)
     .sort((a, b) => a.precio - b.precio); 
   mostrarProductos(filtrados);
@@ -273,11 +273,12 @@ document.getElementById("eje6").addEventListener("click", () => {
   if (actual > 25) 
     actual = 1; 
     
-  const filtrados = productos
+  const filtrados = catalogo
     .filter(p => p.imagen === "imagenes/im" + actual + ".jpg")
   mostrarProductos(filtrados);
 });
 document.getElementById("eje7").addEventListener("click", () => {
 
-  mostrarProductos(productos);
+  mostrarProductos(catalogo);
+
 });
