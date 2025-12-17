@@ -1,0 +1,124 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+background:#f7f2ef;
+color:#3b2f2f;
+}
+
+
+.hero{
+height:100vh;
+background:url("sueños.png") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-text{
+background:rgba(0,0,0,0.4);
+padding:40px;
+text-align:center;
+color:#fff;
+}
+
+.hero-text h1{
+font-family:'Playfair Display', serif;
+font-size:3rem;
+margin:10px 0;
+}
+
+.hero-text button{
+margin-top:20px;
+padding:10px 25px;
+border:none;
+background:#d9a6a3;
+color:#fff;
+cursor:pointer;
+border-radius:20px;
+}
+
+
+.about{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  padding:60px 10%;
+  background:#b65c6f;
+  color:#fff;
+  align-items:center;
+}
+
+.about img{
+  width:300px;
+  max-width:100%;
+  border-radius:10px;
+}
+
+
+.destinos{
+  padding:60px 10%;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  margin-top:30px;
+}
+
+.card{
+  background:#fff;
+  width:250px;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:10px 0 5px;
+}
+
+.card p{
+  margin-bottom:10px;
+  font-size:0.9rem;
+}
+
+/* EXTRAS */
+.extras{
+  background:#f0dcd2;
+  padding:50px 10%;
+  text-align:center;
+}
+
+.extras ul{
+  list-style:none;
+  margin-top:20px;
+}
+
+.extras li{
+  margin:10px 0;
+}
+
+
+@media(max-width:768px){
+  .hero-text h1{
+    font-size:2.2rem;
+  }
+
+  .about{
+    justify-content:center;
+    text-align:center;
+  }
+}
